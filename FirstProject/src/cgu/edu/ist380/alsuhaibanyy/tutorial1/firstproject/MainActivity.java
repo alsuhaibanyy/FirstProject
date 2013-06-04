@@ -45,11 +45,11 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) { checkAnswer();
 		}});
+		
 		questionButton.setOnClickListener(new OnClickListener(){ 
 			@Override
-		public void onClick(View v) 
-			{ showQuestion();	}
-			});
+		public void onClick(View v) { showQuestion();	
+		}});
 		
 		questionView.setText(questions[currentQuestion]); 
 		result.setText("Your score 0 / 0"); 
@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
 			answerView.setText("Sorry, the correct answer is "+answers[currentQuestion]);
 			answerView.setBackgroundColor(0xffff0000);
 		}
-		result.setText("Your score "+correctAnswers+" / "+(currentQuestion+1)); 
+		result.setText("Your score is "+correctAnswers+" / "+(currentQuestion+1)); 
 		questionButton.setEnabled(true);
 		answerButton.setEnabled(false);
 		}
